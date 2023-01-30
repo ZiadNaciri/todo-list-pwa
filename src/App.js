@@ -5,10 +5,9 @@ import NetworkStatus from "./components/NetworkStatus";
 
 function App() {
   return (
-    <div className="todo-app">
-      
-      <NetworkStatus />
     
+    <div className="todo-app">
+      <NetworkStatus />
       <TodoList />
     </div>
   );
