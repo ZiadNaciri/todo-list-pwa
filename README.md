@@ -1,4 +1,4 @@
-- make form responsive
+- make space between submit button and input field
 - add profile authentification
 - add todos with set profile 
 - fix performance score 
