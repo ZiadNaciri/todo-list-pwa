@@ -1,4 +1,4 @@
-- make space between submit button and input field
+- cache static files in the browser
 - add profile authentification
 - add todos with set profile 
 - fix performance score 
