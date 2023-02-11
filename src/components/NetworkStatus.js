@@ -8,9 +8,13 @@ function NetworkStatus() {
   useEffect(() => {
     function handleOnlineStatusChange() {
       if (navigator.onLine) {
+        //console.log(" internet online");
+        
         setIsOnline(true);
         setOfflineAt(null);
       } else {
+       // console.log(" internet offlinee");
+
         setIsOnline(false);
         setOfflineAt(new Date());
 
