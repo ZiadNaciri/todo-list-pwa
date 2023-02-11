@@ -32,14 +32,14 @@ function NetworkStatus() {
 
   if (isOnline) {
     return (
-      <div style={{ color:'green', fontWeight: 'bold'}}>
+      <div className="wifi-on">
         <BiWifi /> You are online.
       </div>
     );
   }
 
   return (
-    <div style={{ color:'red', fontWeight: 'bold'}}>
+    <div className="wifi-off">
       <BiWifiOff /> You have been offline
       since {new Date(offlineAt).toLocaleString()}.
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
@@ -24,6 +25,7 @@ function TodoForm(props) {
   };
 
   return (
+    
     <form onSubmit={handleSubmit} className='todo-form'>
       {props.edit ? (
         <>
@@ -42,14 +44,14 @@ function TodoForm(props) {
       ) : (
         <>
           <input
-            placeholder='Add a todo'
+            placeholder='Insert your todo here ...'
             value={input}
             onChange={handleChange}
             name='text'
-            className='todo-input'
+            className='hvr-glow todo-input'
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className='todo-button'>
+          <button onClick={handleSubmit} className='todo-button hvr-grow-shadow'>
             Add todo
           </button>
         </>
