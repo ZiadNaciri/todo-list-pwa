@@ -41,7 +41,14 @@ function NetworkStatus() {
   return (
     <div className="wifi-off">
       <BiWifiOff /> You have been offline
-      since {new Date(offlineAt).toLocaleString()}.
+      since {new Date(offlineAt).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "numeric",
+          year: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          hour12: true,})}
     </div>
   );
 }
