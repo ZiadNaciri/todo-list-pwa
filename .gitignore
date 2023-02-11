@@ -287,4 +287,6 @@ google-services.json
 .history
 .ionide
 
+## Firebase gitignore
+.firebase
 # End of https://www.toptal.com/developers/gitignore/api/react,reactnative,visualstudiocode
