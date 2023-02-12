@@ -289,4 +289,9 @@ google-services.json
 
 ## Firebase gitignore
 .firebase
+
+## Github hosting cache
+.github
+
+
 # End of https://www.toptal.com/developers/gitignore/api/react,reactnative,visualstudiocode
