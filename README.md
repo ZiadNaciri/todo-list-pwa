@@ -1,5 +1,8 @@
+to dos : 
 
-- Increase performance score 
+- Increase performance score (now 80 lighthouse).
+- Cache hover css and the other assests.
+- Add env file to store firebase configuration .
 
 ### run npm run build && serve build -s for service worker support .
 
