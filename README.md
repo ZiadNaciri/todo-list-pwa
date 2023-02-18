@@ -4,6 +4,7 @@ to dos :
 - Cache hover css and the other assests.
 - Add env file to store firebase configuration .
 
+
 ### run npm run build && serve build -s for service worker support .
 
 # Actual Screenshots of the Todo List Pwa .

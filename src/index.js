@@ -5,7 +5,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 //firebase
 import { initializeApp } from "firebase/app";
-import firebaseConfig from './firebase';
+import firebaseConfig from './firebaseConfig';
 
 
 // Initialize Firebase

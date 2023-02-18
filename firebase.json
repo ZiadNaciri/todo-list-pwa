@@ -2,6 +2,7 @@
   "hosting": {
     "site": "react-todo-list-pwa",
     "public": "build",
+    "predeploy": ["npm install","npm run build"],
     "ignore": [
       "firebase.json",
       "**/.*",
