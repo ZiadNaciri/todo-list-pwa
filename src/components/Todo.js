@@ -29,7 +29,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       <div
         key={todo.id}
         onClick={() => completeTodo(todo.id)}
-        className="completed-cursor"
+        className="completed-cursor  hvr-grow-shadow"
       >
         {todo.text}
       </div>
