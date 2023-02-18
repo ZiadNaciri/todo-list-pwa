@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: cursive;
+  /* font-family: cursive; */
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
-  background-image: url("/public/assets/images/bg-clouds.webp");
+  background-image: url("./imgs/bg-clouds.webp");
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   /* Background image doesn't tile */
@@ -109,9 +111,10 @@ h1 {
 
 
 .todo-input::placeholder {
-  color: #616060;
-  font-weight: bold;
+  color: #6c6c6c;
+  font-weight: 530;
   text-align: center;
+  font-size: 16px;
 }
 
 .todo-button {
@@ -154,9 +157,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
-  background: rgb(39, 162, 224);
-  background: linear-gradient(90deg, rgb(8, 111, 163) 0%, rgb(87, 196, 232) 35%, rgb(54, 212, 221) 65%, rgba(0, 212, 255, 1) 100%);
+  color: #010c22;
+  font-weight: 530;
+  background: rgb(1, 29, 43);
+  background: linear-gradient(90deg, rgb(3, 117, 174) 0%, rgb(34, 184, 234) 35%, rgb(54, 212, 221) 65%, rgba(0, 212, 255, 1) 100%);
 
   padding: 16px;
   border-radius: 5px;
@@ -169,21 +173,16 @@ h1 {
 }
 
 .todo-row:nth-child(4n + 2) {
-  background: linear-gradient(90deg,
-      rgb(5, 205, 255) 0%,
-      rgb(178, 221, 202) 30%,
-      rgb(182, 218, 220) 58%,
-      rgb(174, 211, 224) 71%,
-      rgb(11, 113, 164) 88%,
-      rgb(65, 0, 243) 100%);
+  background: rgb(170,223,182);
+  background: linear-gradient(90deg, rgb(168, 246, 186) 0%, rgb(35, 171, 11) 0%, rgba(136,198,134,1) 26%, rgba(200,231,200,1) 59%);
 }
 
 .todo-row:nth-child(4n + 3) {
   background: linear-gradient(90deg,
-      rgb(100, 1, 100) 0%,
-      rgb(158, 42, 181) 35%,
-      rgba(148, 187, 233) 75%,
-      rgba(17, 122, 255, 1) 100%);
+      rgb(230, 192, 0) 0%,
+      rgb(224, 240, 47) 35%,
+      rgb(206, 233, 211) 75%,
+      rgb(214, 233, 204) 100%);
 }
 
 .icons {
@@ -195,11 +194,11 @@ h1 {
 
 .delete-icon {
   margin-right: 5px;
-  color: #fff;
+  color: #000000;
 }
 
 .edit-icon {
-  color: #fff;
+  color: #000000;
 }
 
 

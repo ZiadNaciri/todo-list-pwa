@@ -45,11 +45,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       <div className="icons">
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}
-          className="delete-icon"
+          className="delete-icon  hvr-grow-shadow"
         />
         <TiEdit
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
-          className="edit-icon"
+          className="edit-icon hvr-grow-shadow"
         />
       </div>
     </div>
