@@ -15,13 +15,15 @@ function TodoForm(props) {
   };
 
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault(); //prevent the browser from reload/refresh
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input
-    });
+    }
+    );
     setInput('');
+    
   };
 
   return (

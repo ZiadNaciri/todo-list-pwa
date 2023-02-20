@@ -3,6 +3,7 @@ import { BiWifi, BiWifiOff } from 'react-icons/bi';
 import "../App.css";
 
 function NetworkStatus() {
+  
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [offlineAt, setOfflineAt] = useState(null);
   useEffect(() => {

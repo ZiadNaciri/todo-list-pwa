@@ -33,7 +33,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       >
         {todo.text}
       </div>
-      <span>
+      {/* <span>
         {todo.date.toLocaleDateString("en-GB", {
           day: "numeric",
           month: "short",
@@ -41,7 +41,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
           minute: "numeric",
           hour12: true,
         })}
-      </span>
+      </span> */}
       <div className="icons">
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}

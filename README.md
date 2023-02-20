@@ -2,7 +2,7 @@ to dos :
 
 - Increase performance score (now 96 lighthouse).
 - Cache hover css and the other assests.
-- add local storage to todos
+- finish setting up notifications with FCM notifications
 
 ### run npm run build && serve build -s for service worker support .
 

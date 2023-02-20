@@ -3,10 +3,13 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import NetworkStatus from "./components/NetworkStatus";
 
+import { requestPermission } from "./firebase";
 
 function App() {
+  requestPermission();
   return (
     <div className="todo-app">
+     
       <NetworkStatus />
 
       <TodoList />
