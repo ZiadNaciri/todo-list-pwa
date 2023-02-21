@@ -25,6 +25,10 @@ body {
   width: 5%;
   margin-top: 7px;
 }
+.toaster {
+  all: none;
+  margin-top: 50px,
+}
 
 .todo-app {
   display: flex;
