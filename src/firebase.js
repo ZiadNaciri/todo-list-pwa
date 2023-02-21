@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
+import { getMessaging, getToken,onMessage  } from "firebase/messaging";
 
 //Initialize firebase app
 const firebaseConfig = {
@@ -14,7 +14,9 @@ const firebaseConfig = {
   
 }
 const app = initializeApp(firebaseConfig);
+
 //Messaging configuration
+const messaging = getMessaging(app);
 
 export const requestPermission = () => {
   console.log("Requesting permission...");
@@ -23,7 +25,6 @@ export const requestPermission = () => {
       console.log("Notification permission granted.");
       // Get registration token. Initially this makes a network call, once retrieved
       // subsequent calls to getToken will return from cache.
-      const messaging = getMessaging(app);
       getToken(messaging, { vapidKey: process.env.REACT_APP_PUBLIC_VAPID_KEY })
         .then((currentToken) => {
           if (currentToken) {
@@ -45,5 +46,13 @@ export const requestPermission = () => {
   });
 }
 
+//Foreground notification handling
+export const onMessageListener = () =>
+  new Promise((resolve) => {
+    onMessage(messaging, (payload) => {
+      console.log("payload", payload)
+      resolve(payload);
+    });
+  });
 
 export default app;

@@ -16,14 +16,6 @@ function TodoList() {
   });
   const [showNotification, setShowNotification] = useState(false);
 
-  //Local storage for todos 
-  // useEffect(() => {
-  //   const storedTodos = localStorage.getItem('todos');
-  //   if (storedTodos) {
-  //     setTodos(JSON.parse(storedTodos));
-  //   }
-  // }, []);
-
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);

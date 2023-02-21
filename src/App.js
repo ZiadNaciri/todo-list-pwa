@@ -3,15 +3,18 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import NetworkStatus from "./components/NetworkStatus";
 
-import { requestPermission } from "./firebase";
+import Notification from "./components/Notification";
 
 function App() {
-  requestPermission();
-  return (
-    <div className="todo-app">
-     
-      <NetworkStatus />
+ 
+  
 
+  return (
+      
+    <div className="todo-app"> 
+      <Notification />
+
+      <NetworkStatus />
       <TodoList />
     </div>
   );
