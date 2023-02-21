@@ -133,6 +133,40 @@ h1 {
   margin-left: 10px;
 }
 
+/*checkbox styling*/
+.todo-row .checkbox-wrapper {
+
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+/* Style for the checked state of the custom checkbox */
+.todo-text {
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.todo-text span {
+  margin-left: 30px;
+}
+.todo-row div svg {
+  height: 28px;
+  width: 28px;
+  margin-right: 10px;
+}
+
+.todo-row div {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+/*end checkbox styling*/
+
 .todo-input.edit {
   border: 2px solid #000000;
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
-import { RiCloseCircleLine } from "react-icons/ri";
+import { RiCloseCircleLine,RiCheckboxBlankCircleLine,RiCheckboxCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
+
 
 const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
@@ -22,17 +23,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   }
 
   return todos.map((todo, index) => (
-    <div
-      className={todo.isComplete ? "todo-row complete hvr-glow" : "todo-row hvr-glow"} 
-      key={index}
-    >
-      <div
-        key={todo.id}
-        onClick={() => completeTodo(todo.id)}
-        className="completed-cursor  hvr-grow-shadow"
-      >
-        {todo.text}
-      </div>
+    <div className={todo.isComplete ? "todo-row complete hvr-glow" : "todo-row hvr-glow"} key={index}>
+    <div className="todo-text" onClick={() => completeTodo(todo.id)}>
+    {todo.isComplete ? <RiCheckboxCircleLine className="completed-cursor hvr-grow-shadow" /> : <RiCheckboxBlankCircleLine className="completed-cursor hvr-grow-shadow" />}
+    <span className="completed-cursor hvr-grow-shadow">{todo.text}</span>
+   </div>
       {/* <span>
         {todo.date.toLocaleDateString("en-GB", {
           day: "numeric",
