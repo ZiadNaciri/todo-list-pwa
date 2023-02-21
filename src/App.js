@@ -12,10 +12,10 @@ function App() {
   return (
       
     <div className="todo-app"> 
-      <Notification />
 
       <NetworkStatus />
       <TodoList />
+      <Notification />
     </div>
   );
 }

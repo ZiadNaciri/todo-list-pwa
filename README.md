@@ -2,6 +2,7 @@ to dos :
 
 - Increase performance score (now 96 lighthouse).
 - Cache hover css and the other assests.
+
 - finish setting up notifications with FCM notifications
 - add check from new app version , or compare the cache to the version of the app
 
