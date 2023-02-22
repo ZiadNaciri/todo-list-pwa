@@ -2,7 +2,7 @@ to dos :
 
 - Increase performance score (now 96 lighthouse).
 
-- finish setting up notifications with FCM notifications
+- finish setting up notifications with FCM notifications (add background notification)
 
 ### run npm run build && serve build -s for service worker support .
 
