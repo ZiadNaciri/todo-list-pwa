@@ -1,6 +1,7 @@
 {
   "short_name": "React PWA",
   "name": "To Do List PWA",
+  "description": "Get organized with our to-do list app. Built with React and powered by Google’s Firebase for timely push notifications. User-friendly interface and hassle-free anonymous sign-in. Stay on top of your schedule with ease!",
   "icons": [
     {
       "src": "assets/images/favicon.ico",

@@ -30,7 +30,7 @@ function TodoList() {
     //const newTodos = [...todos,todo];
     //setTodos(newTodos);
     setTodos(prevTodos => [...prevTodos,todo]);
-    console.log(...todos);
+    //console.log(...todos);
   };
 
   // Update todo method
@@ -71,7 +71,6 @@ function TodoList() {
             updatedTodo.text += " ( Updated )";
           }
           // Return the updated todo item
-        
           return updatedTodo;
         }
         // Return the original todo item if it was not updated
