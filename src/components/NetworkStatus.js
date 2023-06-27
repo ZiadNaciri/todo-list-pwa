@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { BiWifi, BiWifiOff } from "react-icons/bi";
 import toast from "react-hot-toast";
 import "../App.css";
-//import Notification from "./Notification";
+/* 
+import { sendMessage } from "firebase/messaging";
+import { deviceToken,messaging } from "../firebase"; // Import the deviceToken variable */
 
 function NetworkStatus() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -12,16 +14,23 @@ function NetworkStatus() {
       if (navigator.onLine) {
         setIsOnline(true);
         setOfflineAt(null);
-        toast.success("You are back online!");
+        toast.success("You are back online!", {
+          position: "top-center",
+        });
+        //fcm background messaging
+       /*  if (deviceToken) {
+    sendMessage(messaging, {
+      token: deviceToken,
+      notification: {
+        title: "Network Status",
+        body: "You are back online!",
+      },
+    });
+  } */
+        
       } else {
         setIsOnline(false);
         setOfflineAt(new Date());
-
-        // Show push notification
-        /* new Notification("Internet connection lost !!", {
-          body: "You are now offline!",
-        }); */
-
         toast.error("You lost internet connection!");
       }
     }

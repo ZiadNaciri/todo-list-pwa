@@ -7,7 +7,12 @@ function TodoForm(props) {
   const inputRef = useRef(null);
 
   useEffect(() => {
+  // Check if the app is running on a mobile device
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Only call the focus method if the app is not running on a mobile device
+  if (!isMobile) {
     inputRef.current.focus();
+  }
   });
 
   const handleChange = e => {
@@ -25,6 +30,8 @@ function TodoForm(props) {
     setInput('');
     
   };
+  const isMobile = window.innerWidth < 768; // or any other value you consider appropriate
+
 
   return (
     
@@ -52,6 +59,8 @@ function TodoForm(props) {
             name='text'
             className='hvr-glow todo-input'
             ref={inputRef}
+            autoFocus={!isMobile}
+            required
           />
           <button onClick={handleSubmit} className='todo-button hvr-grow-shadow'>
             Add todo

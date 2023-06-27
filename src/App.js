@@ -2,20 +2,20 @@ import React from "react";
 import "./App.css";
 import TodoList from "./components/TodoList";
 import NetworkStatus from "./components/NetworkStatus";
+import { ToastContainer } from "react-toastify";
 
 import Notification from "./components/Notification";
 
 function App() {
- 
-  
-
   return (
-      
-    <div className="todo-app"> 
+    <div >
+      <ToastContainer position="top-center" />
 
-      <NetworkStatus />
-      <TodoList />
-      <Notification />
+      <div className="todo-app">
+        <Notification />
+        <NetworkStatus />
+        <TodoList />
+      </div>
     </div>
   );
 }

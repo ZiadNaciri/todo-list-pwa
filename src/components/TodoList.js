@@ -39,16 +39,6 @@ function TodoList() {
       ///^\s*$/ is the regex for empty string or string with only spaces
       return;
     }
-
-    const date = new Date();
-    // Use the getHours and getMinutes methods to get the current hour and minute
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-    // Use the toString method to convert the hour and minute to a string in the format "HH:MM"
-    const time =
-      hour.toString().padStart(2, "0") +
-      ":" +
-      minute.toString().padStart(2, "0");
     // Use the map method to iterate over the todo items in the todo list
     // and update the todo item with the specified id
     
@@ -58,17 +48,15 @@ function TodoList() {
       //prev.map((item) => {
         if (item.id === todoId) {
           // Update the todo item with the new values in the newValue argument
-          // and set the date and time properties to the current date and time
+       
           let updatedTodo = {
             ...item,
             ...newValue,
-            date: date,
-            time: time,
           };
           // If the text of the todo item has been updated,
           // add a message that says that the todo item has been updated
-          if (item.text !== newValue.text) {
-            updatedTodo.text += " ( Updated )";
+          if (item.text !== newValue.text && !item.text.includes("Updated")) {
+            updatedTodo.text += " ( Updated )"; 
           }
           // Return the updated todo item
           return updatedTodo;
@@ -77,6 +65,7 @@ function TodoList() {
         return item;
       })
     );
+
   };
 
   //remove todo method

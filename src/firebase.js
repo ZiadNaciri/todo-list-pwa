@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 
 //Messaging configuration
 const messaging = getMessaging(app);
-
+let deviceToken = null;
 export const requestPermission = () => {
   console.log("Requesting permission...");
   Notification.requestPermission().then((permission) => {
@@ -25,11 +25,13 @@ export const requestPermission = () => {
       console.log("Notification permission granted.");
       // Get registration token. Initially this makes a network call, once retrieved
       // subsequent calls to getToken will return from cache.
+     
       getToken(messaging, { vapidKey: process.env.REACT_APP_PUBLIC_VAPID_KEY })
         .then((currentToken) => {
           if (currentToken) {
             // Send the token to your server and update the UI if necessary
             console.log("Got FCM token:", currentToken);
+            deviceToken = currentToken;
           } else {
             // Show permission request UI
             console.log(
@@ -54,5 +56,7 @@ export const onMessageListener = () =>
       resolve(payload);
     });
   });
-
+  
+export { messaging };
+export { deviceToken };
 export default app;
