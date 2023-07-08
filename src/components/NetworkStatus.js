@@ -4,7 +4,8 @@ import toast from "react-hot-toast";
 import "../App.css";
 /* 
 import { sendMessage } from "firebase/messaging";
-import { deviceToken,messaging } from "../firebase"; // Import the deviceToken variable */
+import { deviceToken,messaging } from "../firebase"; // Import the deviceToken variable 
+*/
 
 function NetworkStatus() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -17,7 +18,8 @@ function NetworkStatus() {
         toast.success("You are back online!", {
           position: "top-center",
         });
-        //fcm background messaging
+    
+     //fcm background messaging
        /*  if (deviceToken) {
     sendMessage(messaging, {
       token: deviceToken,
