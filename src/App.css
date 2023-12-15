@@ -25,15 +25,11 @@ body {
   width: 5%;
   margin-top: 7px;
 }
-.toaster {
 
-  all: none;
-  margin-top: 50px,
-}
 .Toastify__toast-container {
   /* Change the position of the toast notifications */
   position: fixed;
-  top: 50px;
+  top: 20px;
   right: 0;
   z-index: 9999;
 

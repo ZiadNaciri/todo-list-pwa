@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 
 function TodoForm(props) {
@@ -21,8 +21,6 @@ function TodoForm(props) {
     setInput('');
     
   };
-  const isMobile = window.innerWidth < 768; // or any other value you consider appropriate
-
 
   return (
     

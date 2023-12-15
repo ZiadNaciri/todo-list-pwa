@@ -9,10 +9,10 @@ import Notification from "./components/Notification";
 function App() {
   return (
     <div >
-      <ToastContainer position="top-center" />
+      <ToastContainer />
+      <Notification />
 
       <div className="todo-app">
-        <Notification />
         <NetworkStatus />
         <TodoList />
       </div>
