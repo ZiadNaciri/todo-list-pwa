@@ -15,7 +15,7 @@ function NetworkStatus() {
       if (navigator.onLine) {
         setIsOnline(true);
         setOfflineAt(null);
-        toast.success("You are back online!", {
+        toast.success("You are back online !", {
           position: "top-center",
         });
     
@@ -33,7 +33,7 @@ function NetworkStatus() {
       } else {
         setIsOnline(false);
         setOfflineAt(new Date());
-        toast.error("You lost internet connection!");
+        toast.error("You lost internet connection !");
       }
     }
 
