@@ -32,7 +32,7 @@ const Notification = () => {
         body: payload?.notification?.body,
       });
     })
-    .catch((err) => console.log("failedto show notification: ", err));
+    .catch((err) => console.log("failed to show notification: ", err));
 
   return <Toaster ClassName="toaster" />;
 };
