@@ -1,10 +1,3 @@
-to dos :
-
-- Increase performance score (now 96 lighthouse).
-
-- Finish setting up notifications with FCM notifications (add background notification) (network status component) . 
-
-- Fix auto input select in mobile pwa. 
 
 ### run npm run build && serve build -s for service worker support .
 
